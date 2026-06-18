@@ -1,0 +1,211 @@
+/* ═══ KSK CHAT WIDGET ═══ */
+#ksk-chat {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+  font-family: var(--sans);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+#ksk-chat.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* Кнопка открытия */
+.ksk-chat-btn {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--violet); color: white; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: none !important; transition: transform var(--t-fast) var(--ease-spring), box-shadow var(--t-fast) var(--ease-out), background var(--t-fast) var(--ease-out);
+  position: relative;
+}
+.ksk-chat-btn-inner {
+  display: flex; align-items: center; justify-content: center;
+  width: 100%; height: 100%; border-radius: 50%;
+  position: relative; overflow: hidden;
+}
+.ksk-chat-btn-inner::after {
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.25) 50%,transparent 65%);
+  transform:translateX(-100%);transition:transform 0.55s var(--ease);pointer-events:none;
+}
+.ksk-chat-btn:hover .ksk-chat-btn-inner::after { transform: translateX(100%); }
+.ksk-chat-btn:hover { transform: scale(1.1) translateY(-2px); box-shadow: none !important; }
+.ksk-chat-btn:active { transform: scale(0.95) !important; }
+.ksk-chat-btn svg { width: 24px; height: 24px; }
+.ksk-unread {
+  position: absolute; top: -4px; right: -4px;
+  width: 20px; height: 20px; border-radius: 50%;
+  background: #ef4444; color: white; font-size: 11px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  border: 2px solid white;
+}
+
+/* Окно чата */
+.ksk-chat-window {
+  position: absolute; bottom: 70px; right: 0;
+  width: 360px; height: 520px;
+  background: rgba(0, 0, 0, 0.65) !important;
+  backdrop-filter: blur(16px) saturate(130%) !important;
+  -webkit-backdrop-filter: blur(16px) saturate(130%) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--r-xl) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+  flex-direction: column;
+  overflow: hidden;
+  animation: kskSlideUp 0.3s var(--ease-out);
+}
+@keyframes kskSlideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Хедер */
+.ksk-chat-header {
+  background: rgba(107, 63, 160, 0.55) !important; padding: 16px 20px;
+  display: flex; align-items: center; justify-content: space-between;
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+.ksk-chat-header-info { display: flex; align-items: center; gap: 12px; }
+.ksk-chat-avatar {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+}
+.ksk-chat-avatar svg { width: 24px; height: 24px; color: white; }
+.ksk-chat-name { font-size: 0.9rem; font-weight: 600; color: white; }
+.ksk-chat-status { display: flex; align-items: center; gap: 5px; font-size: 0.75rem; color: rgba(255,255,255,0.75); margin-top: 2px; }
+.ksk-status-dot { width: 7px; height: 7px; border-radius: 50%; background: #4ade80; }
+.ksk-chat-close { background: rgba(255,255,255,0.15); border: none; border-radius: 50%; width: 32px; height: 32px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: white; transition: background var(--t-fast); }
+.ksk-chat-close:hover { background: rgba(255,255,255,0.25); }
+.ksk-chat-close svg { width: 16px; height: 16px; }
+
+/* Сообщения */
+.ksk-chat-messages {
+  flex: 1; overflow-y: auto; padding: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+  scroll-behavior: smooth;
+}
+.ksk-chat-messages::-webkit-scrollbar { width: 4px; }
+.ksk-chat-messages::-webkit-scrollbar-track { background: transparent; }
+.ksk-chat-messages::-webkit-scrollbar-thumb { background: var(--gray-200); border-radius: 4px; }
+
+/* Пузыри */
+.ksk-msg { display: flex; }
+.ksk-msg-user { justify-content: flex-end; }
+.ksk-msg-bubble {
+  max-width: 80%; padding: 10px 14px;
+  border-radius: var(--r-lg); font-size: 0.875rem; line-height: 1.6;
+}
+.ksk-msg-bot .ksk-msg-bubble {
+  background: rgba(255, 255, 255, 0.08) !important; color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important; border-bottom-left-radius: 4px;
+  box-shadow: var(--shadow-xs);
+}
+.ksk-msg-user .ksk-msg-bubble {
+  background: rgba(107, 63, 160, 0.6) !important; color: white !important;
+  border: 1px solid rgba(255, 255, 255, 0.15) !important;
+  border-bottom-right-radius: 4px;
+}
+
+/* Лоадер */
+.ksk-loader { display: flex; gap: 5px; align-items: center; padding: 12px 16px !important; }
+.ksk-loader span {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--gray-400); animation: kskDot 1.2s infinite;
+}
+.ksk-loader span:nth-child(2) { animation-delay: 0.2s; }
+.ksk-loader span:nth-child(3) { animation-delay: 0.4s; }
+@keyframes kskDot { 0%,60%,100%{transform:translateY(0)} 30%{transform:translateY(-8px)} }
+
+/* Быстрые ответы */
+.ksk-quick-replies { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 4px; }
+.ksk-quick-btn {
+  padding: 6px 12px; border-radius: var(--r-full);
+  border: 1px solid rgba(255, 255, 255, 0.15) !important; color: #ffffff !important;
+  background: rgba(255, 255, 255, 0.08) !important; font-size: 0.78rem; font-weight: 500;
+  cursor: pointer; font-family: var(--sans);
+  transition: transform var(--t-fast) var(--ease-spring), box-shadow var(--t-fast) var(--ease-out), background var(--t-fast) var(--ease-out), border-color var(--t-fast) var(--ease-out), color var(--t-fast);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+}
+.ksk-quick-btn::after {
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,0.25) 50%,transparent 65%);
+  transform:translateX(-100%);transition:transform 0.55s var(--ease);pointer-events:none;
+}
+.ksk-quick-btn:hover::after { transform: translateX(100%); }
+.ksk-quick-btn:hover { background: rgba(167, 139, 250, 0.2) !important; color: #cbb5f0 !important; transform: translateY(-2px) scale(1.04); box-shadow: 0 4px 10px rgba(107,63,160,0.15); border-color: #cbb5f0 !important; }
+.ksk-quick-btn:active { transform: scale(0.96) !important; }
+
+/* Инпут */
+.ksk-chat-input-wrap {
+  display: flex; align-items: center; gap: 8px;
+  padding: 12px 16px; border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(0, 0, 0, 0.25) !important; flex-shrink: 0;
+}
+.ksk-chat-input {
+  flex: 1; padding: 10px 14px; border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: var(--r-full); font-size: 0.875rem; font-family: var(--sans);
+  color: #ffffff !important; background: rgba(255, 255, 255, 0.08) !important; outline: none;
+  transition: border-color var(--t-fast);
+}
+.ksk-chat-input:focus { border-color: #cbb5f0 !important; }
+.ksk-chat-input::placeholder { color: rgba(255, 255, 255, 0.45) !important; }
+.ksk-chat-send {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--violet); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: white; flex-shrink: 0;
+  transition: transform var(--t-fast) var(--ease-spring), background var(--t-fast);
+}
+.ksk-chat-send:hover { transform: scale(1.1); background: var(--violet-mid); }
+.ksk-chat-send svg { width: 16px; height: 16px; }
+
+/* Мобиль */
+@media (max-width: 480px) {
+  .ksk-chat-window { width: calc(100vw - 32px); right: -8px; height: 70vh; }
+  #ksk-chat { bottom: 16px; right: 16px; }
+}
+
+/* Красивая кнопка-ссылка в сообщениях бота */
+.ksk-chat-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 6px 4px 6px 0;
+  padding: 8px 14px;
+  border-radius: var(--r-md);
+  background: var(--violet);
+  color: white !important;
+  text-decoration: none !important;
+  font-weight: 500;
+  font-size: 0.8rem;
+  transition: all var(--t-fast);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--violet);
+  cursor: pointer;
+  vertical-align: middle;
+}
+.ksk-chat-link-btn:hover {
+  background: var(--violet-mid);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+.ksk-chat-link-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 992px) {
+  .ksk-chat-input {
+    font-size: 16px !important;
+  }
+}
+

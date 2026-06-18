@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kostenlose Beratung — KSK Farmos GmbH &amp; Co. KG</title>
+  <meta name="description" content="Kostenlose und unverbindliche Beratung zur Intensivpflege. Wir nehmen uns Zeit für Sie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1062">
+  <link rel="icon" href="img/common/logo-icon.png?v=3">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script>emailjs.init('FvtHmqXFbDTGygZuv')</script>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- OpenGraph Social Metadata -->
+  <meta property="og:title" content="Kostenlose Beratung — KSK Farmos GmbH &amp; Co. KG">
+  <meta property="og:description" content="Kostenlose und unverbindliche Beratung zur Intensivpflege. Wir nehmen uns Zeit für Sie.">
+  <meta property="og:image" content="https://ksk-farmos.de/img/common/logo-icon.png">
+  <meta property="og:url" content="https://ksk-farmos.de/beratung.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="img/common/logo-icon.png?v=3" alt="KSK Farmos GmbH &amp; Co. KG"><div class="logo-text">KSK Farmos GmbH &amp; Co. KG<span data-i18n="brand.sub">Intensivpflegedienst</span></div></a>
+    <nav class="nav">
+      <a class="nav-link" href="index.html" data-i18n="nav.start">Startseite</a>
+      <a class="nav-link" href="leistungen.html" data-i18n="nav.leistungen">Leistungen</a>
+      <a class="nav-link" href="ueber-uns.html" data-i18n="nav.ueber">Über uns</a>
+      <a class="nav-link" href="karriere.html" data-i18n="nav.karriere">Karriere</a>
+      <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a class="nav-link" href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
+    </nav>
+    <div class="header-right"><a href="beratung.html" class="btn btn-primary btn-sm" data-i18n="nav.beratung">Kostenlose Beratung</a><button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button></div>
+  </div>
+</header>
+<div class="mobile-menu"><a class="nav-link" href="index.html" data-i18n="nav.start">Startseite</a><a class="nav-link" href="leistungen.html" data-i18n="nav.leistungen">Leistungen</a><a class="nav-link" href="ueber-uns.html" data-i18n="nav.ueber">Über uns</a><a class="nav-link" href="karriere.html" data-i18n="nav.karriere">Karriere</a><a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a><a class="nav-link" href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></div>
+
+<main>
+
+<!-- BERATUNG FORM -->
+<section class="section pt-header">
+  <div class="container">
+    <div class="grid-2">
+      <div class="beratung-info">
+        <h2 class="reveal-left beratung-title" data-i18n="ber.h2">Wir sind für Sie da</h2>
+        <ul class="check-list reveal-left stagger-1">
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="ber.c1">Komplett kostenlos und unverbindlich</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="ber.c2">Persönlich oder telefonisch</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="ber.c3">Rückmeldung innerhalb von 24 Stunden</span></div></li>
+        </ul>
+        <div class="mb-lg hide-mobile"></div>
+        <div class="hide-mobile">
+          <a href="tel:056939189907" class="btn btn-outline btn-lg btn-contact mb-sm reveal-left stagger-2">05693 / 9189907 <i data-lucide="phone"></i></a>
+          <br>
+          <a href="mailto:pflege@ksk-farmos.de" class="btn btn-outline btn-lg btn-contact reveal-left stagger-3">pflege@ksk-farmos.de <i data-lucide="mail"></i></a>
+        </div>
+      </div>
+      <div class="reveal-right">
+        <div class="form-card">
+          <form data-form="beratung" id="beratungForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form.vorname">Vorname</label>
+                <input type="text" required name="vorname" data-i18n-ph="form.vorname">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form.nachname">Nachname</label>
+                <input type="text" required name="nachname" data-i18n-ph="form.nachname">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" data-i18n="form.email">E-Mail</label>
+                <input type="email" required name="email" data-i18n-ph="form.email">
+              </div>
+              <div class="form-group">
+                <label class="form-label" data-i18n="form.telefon">Telefon</label>
+                <input type="tel" name="telefon" data-i18n-ph="form.telefon">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" data-i18n="form.nachricht">Ihre Nachricht (optional)</label>
+              <textarea rows="5" name="nachricht" data-i18n-ph="ber.ph"></textarea>
+            </div>
+            <div class="form-group">
+              <label><input type="checkbox" required> <span data-i18n="form.datenschutz">Ich habe die Datenschutzerklärung gelesen und stimme ihr zu.</span></label>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg" data-i18n="ber.btn">Beratung anfordern <i data-lucide="arrow-right"></i></button>
+          </form>
+        </div>
+        <div class="contact-buttons-wrapper show-mobile mt-lg text-center">
+          <a href="tel:056939189907" class="btn btn-outline btn-lg btn-contact reveal-left stagger-2">05693 / 9189907 <i data-lucide="phone"></i></a>
+          <a href="mailto:pflege@ksk-farmos.de" class="btn btn-outline btn-lg btn-contact reveal-left stagger-3">pflege@ksk-farmos.de <i data-lucide="mail"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="index.html" class="logo"><img src="img/common/logo-icon.png?v=3" alt="KSK Farmos GmbH &amp; Co. KG"><div class="logo-text">KSK Farmos GmbH &amp; Co. KG<span data-i18n="brand.sub">Intensivpflegedienst</span></div></a><p data-i18n="footer.desc">Spezialisierter Intensivpflegedienst in Nordhessen — seit 2013.</p></div><div><h4 data-i18n="footer.nav">Navigation</h4><div class="footer-links"><a href="index.html" data-i18n="nav.start">Startseite</a><a href="leistungen.html" data-i18n="nav.leistungen">Leistungen</a><a href="ueber-uns.html" data-i18n="nav.ueber">Über uns</a><a href="karriere.html" data-i18n="nav.karriere">Karriere</a><a href="faq.html" data-i18n="nav.faq">FAQ</a><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></div></div><div><h4 data-i18n="footer.kontakt">Kontakt</h4><div class="footer-contact"><a href="tel:056939189907">05693 / 9189907</a><a href="tel:01707652593">0170 / 7652593</a><a href="mailto:pflege@ksk-farmos.de">pflege@ksk-farmos.de</a><p>Ehringer Weg 2b<br>34471 Volkmarsen</p><div class="footer-social"><a href="https://www.facebook.com/share/1UM6QWWDnx/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://www.instagram.com/ksk.farmos.intensivpflege/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></div></div></div><div><h4 data-i18n="footer.legal">Rechtliches</h4><div class="footer-links"><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutzerklärung</a><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></div></div></div><div class="footer-bottom">
+      <span data-i18n="footer.copy">&copy; 2025 KSK Farmos GmbH &amp; Co. KG — Alle Rechte vorbehalten.</span>
+    </div></div></footer>
+<div class="lang-float">
+  <button class="lang-float-btn" id="langFloatBtn"><i data-lucide="globe"></i> DE <i data-lucide="chevron-up"></i></button>
+  <div class="lang-float-dropdown" id="langDropdown">
+    <a href="#" data-lang="de" class="active">Deutsch</a>
+    <a href="#" data-lang="en">English</a>
+    <a href="#" data-lang="ru">Русский</a>
+    <a href="#" data-lang="tr">Türkçe</a>
+    <a href="#" data-lang="pl">Polski</a>
+    <a href="#" data-lang="ro">Română</a>
+    <a href="#" data-lang="bg">Български</a>
+    <a href="#" data-lang="ua">Українська</a>
+    <a href="#" data-lang="ar">العربية</a>
+    <a href="#" data-lang="bs">Bosanski</a>
+  </div>
+</div>
+
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="js/main.js?v=5.22"></script>
+  <!-- KSK Chat Widget -->
+  <link rel="stylesheet" href="css/chat-widget.css?v=6">
+  <script src="js/chat-widget.js?v=3"></script>
+<script>
+document.getElementById('beratungForm').addEventListener('submit', async function(e) {
+  e.preventDefault()
+  
+  const existingAlert = this.querySelector('.form-alert');
+  if (existingAlert) existingAlert.remove();
+
+  if (!this.checkValidity()) {
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'form-alert form-alert-warning';
+    
+    const lang = document.documentElement.lang || 'de';
+    let msg = 'Bitte füllen Sie alle erforderlichen Felder aus.';
+    if (lang === 'ru') msg = 'Пожалуйста, заполните все обязательные поля.';
+    if (lang === 'en') msg = 'Please fill in all required fields.';
+    
+    alertDiv.innerHTML = `
+      <svg class="form-alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <div>${msg}</div>
+    `;
+    
+    this.insertBefore(alertDiv, this.firstChild);
+    
+    this.querySelectorAll('input[required]').forEach(input => {
+      if (!input.checkValidity()) {
+        input.classList.add('is-invalid');
+      } else {
+        input.classList.remove('is-invalid');
+      }
+    });
+    return;
+  }
+
+  const btn = this.querySelector('[type="submit"]')
+  const originalHTML = btn.innerHTML
+  btn.disabled = true
+  btn.innerHTML = 'Wird gesendet...'
+
+  const templateParams = {
+    vorname: this.querySelector('[name="vorname"]').value,
+    nachname: this.querySelector('[name="nachname"]').value,
+    email: this.querySelector('[name="email"]').value,
+    telefon: this.querySelector('[name="telefon"]').value,
+    nachricht: this.querySelector('[name="nachricht"]').value || '—'
+  }
+
+  try {
+    await emailjs.send('service_h12u11k', 'template_85bxfic', templateParams)
+    const card = this.closest('.form-card')
+    card.innerHTML = `
+      <div style="text-align:center;padding:48px 24px">
+        <div style="width:72px;height:72px;border-radius:50%;background:var(--violet-pale);display:flex;align-items:center;justify-content:center;margin:0 auto 24px">
+          <i data-lucide="check" style="color:var(--violet);width:32px;height:32px"></i>
+        </div>
+        <h3 style="font-family:var(--serif);margin-bottom:12px">Vielen Dank!</h3>
+        <p style="color:var(--text-muted);line-height:1.7;max-width:300px;margin:0 auto">
+          Ihre Anfrage wurde erfolgreich gesendet.<br>
+          Wir melden uns innerhalb von 24 Stunden.
+        </p>
+      </div>
+    `
+    if(typeof lucide !== 'undefined') lucide.createIcons()
+    card.scrollIntoView({ behavior: 'smooth', block: 'center' })
+  } catch(err) {
+    btn.disabled = false
+    btn.innerHTML = originalHTML
+    if(typeof lucide !== 'undefined') lucide.createIcons()
+    console.error('EmailJS Error:', err)
+    
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'form-alert form-alert-error';
+    
+    const lang = document.documentElement.lang || 'de';
+    let msg = 'Fehler beim Senden. Bitte rufen Sie uns an: 05693 / 9189907';
+    if (lang === 'ru') msg = 'Ошибка отправки. Пожалуйста, позвоните нам: 05693 / 9189907';
+    if (lang === 'en') msg = 'Error sending message. Please call us: 05693 / 9189907';
+    
+    alertDiv.innerHTML = `
+      <svg class="form-alert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <octagon points="7.86 2 16.14 2 22 7.86 22 16.14 16.14 22 7.86 22 2 16.14 2 7.86 7.86 2"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <div>${msg}</div>
+    `;
+    
+    this.insertBefore(alertDiv, this.firstChild);
+  }
+})
+
+</script>
+</body>
+</html>

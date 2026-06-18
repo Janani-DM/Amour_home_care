@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leistungen — KSK Farmos GmbH &amp; Co. KG Intensivpflegedienst</title>
+  <meta name="description" content="Häusliche Intensivpflege, Aufenthaltskonzept Kassel und Fortbildungen. Alle Leistungen von KSK Farmos GmbH &amp; Co. KG.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=1062">
+  <link rel="preload" as="image" href="img/hero/mobile/hero2.webp?v=10" media="(max-width: 992px)">
+  <link rel="preload" as="image" href="img/hero/desktop/hero2.webp?v=20" media="(min-width: 993px)">
+  <link rel="icon" href="img/common/logo-icon.png?v=3">
+  <style>
+    .fort-grid.center {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      gap: 14px !important;
+    }
+    .fort-grid.center .fort-item {
+      flex: 0 1 calc(25% - 11px) !important;
+      min-width: 250px !important;
+    }
+    @media (max-width: 1024px) {
+      .fort-grid.center .fort-item {
+        flex: 0 1 calc(50% - 7px) !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .fort-grid.center .fort-item {
+        flex: 0 1 100% !important;
+      }
+    }
+  </style>
+  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <!-- OpenGraph Social Metadata -->
+  <meta property="og:title" content="Leistungen — KSK Farmos GmbH &amp; Co. KG Intensivpflegedienst">
+  <meta property="og:description" content="Häusliche Intensivpflege, Aufenthaltskonzept Kassel und Fortbildungen. Alle Leistungen von KSK Farmos GmbH &amp; Co. KG.">
+  <meta property="og:image" content="https://ksk-farmos.de/img/common/logo-icon.png">
+  <meta property="og:url" content="https://ksk-farmos.de/leistungen.html">
+  <meta property="og:type" content="website">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header header-transparent-allowed" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo"><img src="img/common/logo-icon.png?v=3" alt="KSK Farmos GmbH &amp; Co. KG"><div class="logo-text">KSK Farmos GmbH &amp; Co. KG<span data-i18n="brand.sub">Intensivpflegedienst</span></div></a>
+    <nav class="nav">
+      <a class="nav-link" href="index.html" data-i18n="nav.start">Startseite</a>
+      <a class="nav-link active" href="leistungen.html" data-i18n="nav.leistungen">Leistungen</a>
+      <a class="nav-link" href="ueber-uns.html" data-i18n="nav.ueber">Über uns</a>
+      <a class="nav-link" href="karriere.html" data-i18n="nav.karriere">Karriere</a>
+      <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+      <a class="nav-link" href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
+    </nav>
+    <div class="header-right">
+      <a href="beratung.html" class="btn btn-primary btn-sm" data-i18n="nav.beratung">Kostenlose Beratung</a>
+      <button class="mobile-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mobile-menu">
+  <a class="nav-link" href="index.html" data-i18n="nav.start">Startseite</a>
+  <a class="nav-link active" href="leistungen.html" data-i18n="nav.leistungen">Leistungen</a>
+  <a class="nav-link" href="ueber-uns.html" data-i18n="nav.ueber">Über uns</a>
+  <a class="nav-link" href="karriere.html" data-i18n="nav.karriere">Karriere</a>
+  <a class="nav-link" href="faq.html" data-i18n="nav.faq">FAQ</a>
+  <a class="nav-link" href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a>
+</div>
+
+<main>
+
+<!-- SUB-HERO -->
+<section class="hero-cutout hero-fs">
+  <div class="hero-home-photo-frame leistungen-hero-frame">
+    <div class="hero-home-photo-inner">
+      <picture>
+        <source srcset="img/hero/mobile/hero2.webp?v=10" media="(max-width: 992px)">
+        <img src="img/hero/desktop/hero2.webp?v=20" alt="Leistungen" class="hero-home-photo" loading="eager">
+      </picture>
+    </div>
+    <div class="hero-home-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner centered">
+      <div class="hero-content">
+        <h1 class="hero-title reveal">
+          <span class="ht-line-first">
+            <span class="ht-line" data-i18n="srv.h1a">Unsere</span>
+            <span class="ht-line" data-i18n="srv.h1b">medizinischen</span>
+          </span>
+          <em class="ht-line" data-i18n="srv.h1em">Leistungen</em>
+        </h1>
+        <p class="hero-subtitle reveal stagger-1" data-i18n="lei.lead">Intensivpflege zu Hause, einzigartige Wohnkonzepte und ständige Weiterbildung — alles aus einer Hand.</p>
+        <div class="hero-actions reveal stagger-2">
+          <a href="beratung.html" class="btn btn-primary btn-lg" data-i18n="cta.beratung">Kostenlose Beratung</a>
+          <a href="#haeuslich" class="btn btn-outline btn-lg" data-i18n="cta.leistungen">Alle Leistungen</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BEATMUNGSPFLEGE ACCENT -->
+<section class="section">
+  <div class="container">
+    <div class="editorial-accent reveal">
+      <p data-i18n="lei.beat"><span style="color: var(--violet); font-style: italic;">Die Beatmungspflege ist unsere Kernkompetenz.</span><br>Die erfahrenen Pflegefachkräfte für außerklinische Beatmung betreuen Klienten mit moderner Technik und in enger Zusammenarbeit mit Fachärzten für Pneumologie.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SEKTION 1: HÄUSLICHE INTENSIVPFLEGE -->
+<section class="section-edge-photo img-left section-gray" id="haeuslich">
+  <div class="edge-photo-frame">
+    <div class="edge-photo-inner">
+      <img src="img/leistungen/leistungen-hero.jpg" alt="Häusliche Versorgung" class="pos-girl" loading="lazy">
+    </div>
+    <div class="edge-photo-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="grid-2">
+      <div class="empty-column"></div>
+      <div>
+        <span class="section-tag reveal-right" data-i18n="lei.h.tag">Häusliche Intensivpflege</span>
+        <h2 class="reveal-right stagger-1" data-i18n="lei.h.h2">Professionelle Pflege in Ihren eigenen vier Wänden</h2>
+        <p class="reveal-right stagger-2" data-i18n="lei.h.p" style="margin-bottom: 25px;">Wir versorgen Menschen mit schweren Erkrankungen in ihrem gewohnten Umfeld — 24 Stunden am Tag, 7 Tage die Woche, 365 Tage im Jahr.</p>
+
+        <div class="faq-list reveal-right stagger-3" style="margin: 0;">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="lei.grp1">Grundversorgung</span>
+              <span class="faq-toggle"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" style="padding-top: 10px;">
+                <ul class="check-list">
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp1.1">Grund- und Behandlungspflege</span></div></li>
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp1.2">Medikamentenmanagement</span></div></li>
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp1.3">Vitalzeichenüberwachung und Monitoring</span></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="lei.grp2">Spezielle Therapien</span>
+              <span class="faq-toggle"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" style="padding-top: 10px;">
+                <ul class="check-list">
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp2.1">Invasive und nicht-invasive Beatmung</span></div></li>
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp2.2">Trachealkanülenmanagement</span></div></li>
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp2.3">Wundversorgung und Ernährungstherapie</span></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span data-i18n="lei.grp3">Organisation</span>
+              <span class="faq-toggle"><i data-lucide="plus"></i></span>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-inner" style="padding-top: 10px;">
+                <ul class="check-list">
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp3.1">Pflegeplanung und Dokumentation</span></div></li>
+                  <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.grp3.2">Koordination mit Ärzten und Therapeuten</span></div></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- DIAGNOSEN CARDS -->
+<section class="section">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-tag" data-i18n="idx.diag.tag">Diagnosen</span>
+      <h2 data-i18n="lei.diag.h2">Wen wir versorgen</h2>
+    </div>
+    <div class="flex-grid-3">
+      <div class="card card-centered">
+        <div class="card-graphic"><i data-lucide="wind"></i></div>
+        <h3 data-i18n="idx.diag1">Beatmungspatienten</h3>
+        <p data-i18n="lei.diag1.desc">Spezialisierte Intensivpflege für Menschen, die auf invasive oder nicht-invasive Beatmung angewiesen sind. Wir sichern die lückenlose Überwachung und professionelles Gerätemanagement.</p>
+      </div>
+      <div class="card card-centered">
+        <div class="card-graphic"><i data-lucide="brain"></i></div>
+        <h3 data-i18n="idx.diag2">Wachkoma (Apallisches Syndrom)</h3>
+        <p data-i18n="lei.diag2.desc">Ganzheitliche Langzeitversorgung für Patienten mit schweren Bewusstseinsstörungen. Unser Fokus liegt auf basaler Stimulation und der Erhaltung von Körperfunktionen.</p>
+      </div>
+      <div class="card card-centered">
+        <div class="card-graphic"><i data-lucide="activity"></i></div>
+        <h3 data-i18n="idx.diag3">ALS / Neurologische Erkrankungen</h3>
+        <p data-i18n="lei.diag3.desc">Individuelle Begleitung bei fortschreitenden neurologischen Veränderungen — empathisch, fachlich fundiert und auf die Erhaltung der Lebensqualität ausgerichtet.</p>
+      </div>
+      <div class="card card-centered">
+        <div class="card-graphic"><i data-lucide="accessibility"></i></div>
+        <h3 data-i18n="idx.diag4">Querschnittslähmung</h3>
+        <p data-i18n="lei.diag4.desc">Professionelle Unterstützung und pflege für Menschen mit Rückenmarksverletzungen. Wir fördern die Selbstständigkeit und beugen gezielt Komplikationen vor.</p>
+      </div>
+      <div class="card card-centered">
+        <div class="card-graphic"><i data-lucide="stethoscope"></i></div>
+        <h3 data-i18n="idx.diag5">Schädel-Hirn-Trauma</h3>
+        <p data-i18n="lei.diag5.desc">Langfristige Versorgung nach schweren Hirnverletzungen. Zielgerichtet auf die Stabilisierung des Zustands und Unterstützung im Alltag.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEKTION 2: AUFENTHALTSKONZEPT -->
+<section class="section-edge-photo img-right section-gray" id="aufenthalt">
+  <div class="edge-photo-frame">
+    <div class="edge-photo-inner">
+      <picture>
+        <source srcset="img/leistungen/leistungen-aufenthalt-zimmer.webp?v=2" media="(max-width: 992px)">
+        <img src="img/leistungen/leistungen-aufenthalt-zimmer.jpg?v=2" alt="Aufenthaltskonzept Zimmer" loading="lazy">
+      </picture>
+    </div>
+    <div class="edge-photo-overlay"></div>
+  </div>
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <span class="section-tag reveal-left" data-i18n="lei.a.tag">Pflege in verschiedenen Wohnprojekten</span>
+        <h2 class="reveal-left stagger-1" data-i18n="lei.a.h2">Was Sie erwartet</h2>
+        <p class="reveal-left stagger-2" data-i18n="lei.a.p">Unser ambulanter Pflegedienst ist auf die Betreuung von Menschen mit Demenz in verschiedenen Wohnprojekten spezialisiert. In einer geschützten, häuslichen Umgebung ermöglichen wir ein würdevolles Leben mit Struktur, Sicherheit und individueller Zuwendung.</p>
+        <div class="service-group-label reveal-left stagger-3" data-i18n="lei.a.grp1">Wohnen & Ausstattung</div>
+        <ul class="check-list reveal-left stagger-4">
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.1">Zimmer mit eigenen Möbeln</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.2">Alle notwendigen medizinischen Geräte</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.3">Großzügigen Garten</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.4">Bibliothek und Gemeinschaftsräume</span></div></li>
+        </ul>
+
+        <div class="service-group-label reveal-left stagger-5" style="margin-top: 25px;" data-i18n="lei.a.grp2">Betreuung & Service</div>
+        <ul class="check-list reveal-left stagger-6">
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.5">24h Betreuung und Überwachung</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.6">Umfassende pflegerische und medizinische Leistungen</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.7">Individuell gestalteter Tagesablauf</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.8">Validation und aktivierende Betreuung</span></div></li>
+          <li><span class="check-icon"><i data-lucide="check"></i></span><div><span data-i18n="lei.a.9">Förderung von vorhandenen Fähigkeiten.</span></div></li>
+        </ul>
+      </div>
+      <div class="empty-column"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEKTION 3: PFLEGEBERATUNG -->
+<section class="section" id="fortbildung">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-tag" data-i18n="lei.f.tag">Pflegeberatung</span>
+      <h2 data-i18n="lei.f.h2">Individuelle Pflegeberatung</h2>
+      <p data-i18n="lei.f.p">Wir bieten individuelle Pflegeberatungen für Pflegebedürftige und Angehörige zur optimalen Versorgung im häuslichen Umfeld.</p>
+    </div>
+    <div class="fort-grid center">
+      <div class="fort-item">
+        <h3 data-i18n="lei.f1.h3">Pflegegrade &amp; Leistungen</h3>
+        <p data-i18n="lei.f1.p">Beratung zu Pflegegraden und Leistungen der Pflegekasse.</p>
+      </div>
+      <div class="fort-item">
+        <h3 data-i18n="lei.f2.h3">Anleitung für Angehörige</h3>
+        <p data-i18n="lei.f2.p">Anleitung von Angehörigen zur häuslichen Pflege.</p>
+      </div>
+      <div class="fort-item">
+        <h3 data-i18n="lei.f3.h3">Hilfsmittel-Organisation</h3>
+        <p data-i18n="lei.f3.p">Hilfe bei der Organisation von Hilfsmitteln (Pflegebett, Rollatoren etc.).</p>
+      </div>
+      <div class="fort-item">
+        <h3 data-i18n="lei.f4.h3">Demenz &amp; Verhalten</h3>
+        <p data-i18n="lei.f4.p">Beratung zu Demenz und Umgang mit herausforderndem Verhalten.</p>
+      </div>
+      <div class="fort-item">
+        <h3 data-i18n="lei.f5.h3">Entlastungsangebote</h3>
+        <p data-i18n="lei.f5.p">Aufklärung und Erklärung über Entlastungsangebote für pflegende Angehörige.</p>
+      </div>
+      <div class="fort-item">
+        <h3 data-i18n="lei.f6.h3">Wohnraumanpassung</h3>
+        <p data-i18n="lei.f6.p">Beratung zur Wohnraumanpassung und Barrierefreiheit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KOSTEMÜBERNAHME -->
+<section class="section section-gray">
+  <div class="container">
+    <div class="section-header centered reveal">
+      <span class="section-tag" data-i18n="lei.k.tag">KOSTENÜBERNAHME</span>
+      <h2 data-i18n="lei.k.h2">Wer die Kosten trägt</h2>
+      <p class="section-lead" data-i18n="lei.k.lead" style="max-width: 860px; margin: 24px auto 0; font-size: 1.05rem; line-height: 1.7;">Intensivpflegedienst KSK Farmos GmbH &amp; Co. KG übernehmen nach Erhalt einer Vollmacht die Verhandlungen mit den Kostenträgern bezüglich Kostenübernahme.</p>
+    </div>
+    <div class="kosten-list">
+      <div class="kosten-item">
+        <div class="kosten-icon"><i data-lucide="shield-check"></i></div>
+        <div>
+          <h3 data-i18n="lei.k1.h3">Krankenkasse (SGB V)</h3>
+          <div data-i18n="lei.k1.p" style="line-height: 1.6;">Die Krankenkasse zahlt medizinische Behandlung, unabhängig vom Pflegegrad:<ul style="margin-top: 8px; margin-left: 20px; list-style-type: disc;"><li>Arztbesuche und Therapien (Physio-, Ergo-, Logopädie)</li><li>Krankenhausbehandlung</li><li>Arznei-, Heil- und Hilfsmittel (z. B. Rollstuhl, Pflegebett – mit Genehmigung)</li><li>Häusliche Krankenpflege bei akuter Krankheit oder nach Krankenhaus</li></ul></div>
+        </div>
+      </div>
+      <div class="kosten-item">
+        <div class="kosten-icon"><i data-lucide="heart-handshake"></i></div>
+        <div>
+          <h3 data-i18n="lei.k2.h3">Pflegekasse (SGB XI)</h3>
+          <div data-i18n="lei.k2.p" style="line-height: 1.6;">Die Pflegekasse zahlt pflegerische Unterstützung bei Pflegebedürftigkeit (Pflegegrad nötig):</div>
+        </div>
+      </div>
+      <div class="kosten-item">
+        <div class="kosten-icon"><i data-lucide="landmark"></i></div>
+        <div>
+          <h3 data-i18n="lei.k3.h3">Sozialamt</h3>
+          <div data-i18n="lei.k3.p" style="line-height: 1.6;">Bei übersteigenden Kosten des tatsächlichen Pflegebedarfs die Leistungen der oben genannten Kostenträger (Pflegekasse)  muss der verbleibende Kostenanteil entweder privat getragen werden oder — sofern die Voraussetzungen gegeben sind — von unterschiedlichen Ämtern (Übernehmen Sozialamt, Beihilfe, Regierungspräsidium) übernommen werden.</div>
+        </div>
+      </div>
+      <div class="kosten-item">
+        <div class="kosten-icon"><i data-lucide="umbrella"></i></div>
+        <div>
+          <h3 data-i18n="lei.k4.h3">Private Versicherung</h3>
+          <div data-i18n="lei.k4.p" style="line-height: 1.6;">Eine zusätzlich abgeschlossene Kranken- oder Unfallversicherung kann je nach Prüfung einen Anteil der anfallenden Kosten übernehmen.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="container">
+    <div class="cta-card-violet reveal-scale">
+      <h2 data-i18n="cta.beratung">Kostenlose Beratung</h2>
+      <p data-i18n="cta.beratung.p">Wir beraten Sie persönlich — kostenlos und unverbindlich.</p>
+      <a href="beratung.html" class="btn btn-glass-dark btn-xl" data-i18n="cta.sprechen">Lassen Sie uns sprechen <i data-lucide="arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><img src="img/common/logo-icon.png?v=3" alt="KSK Farmos GmbH &amp; Co. KG"><div class="logo-text">KSK Farmos GmbH &amp; Co. KG<span data-i18n="brand.sub">Intensivpflegedienst</span></div></a>
+        <p data-i18n="footer.desc">Spezialisierter Intensivpflegedienst in Nordhessen — seit 2013.</p>
+      </div>
+      <div><h4 data-i18n="footer.nav">Navigation</h4><div class="footer-links"><a href="index.html" data-i18n="nav.start">Startseite</a><a href="leistungen.html" data-i18n="nav.leistungen">Leistungen</a><a href="ueber-uns.html" data-i18n="nav.ueber">Über uns</a><a href="karriere.html" data-i18n="nav.karriere">Karriere</a><a href="faq.html" data-i18n="nav.faq">FAQ</a><a href="kontakt.html" data-i18n="nav.kontakt">Kontakt</a></div></div>
+      <div><h4 data-i18n="footer.kontakt">Kontakt</h4><div class="footer-contact"><a href="tel:056939189907">05693 / 9189907</a><a href="tel:01707652593">0170 / 7652593</a><a href="mailto:pflege@ksk-farmos.de">pflege@ksk-farmos.de</a><p>Ehringer Weg 2b<br>34471 Volkmarsen</p><div class="footer-social"><a href="https://www.facebook.com/share/1UM6QWWDnx/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a><a href="https://www.instagram.com/ksk.farmos.intensivpflege/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a></div></div></div>
+      <div><h4 data-i18n="footer.legal">Rechtliches</h4><div class="footer-links"><a href="datenschutz.html" data-i18n="footer.datenschutz">Datenschutzerklärung</a><a href="impressum.html" data-i18n="footer.impressum">Impressum</a></div></div>
+    </div>
+    <div class="footer-bottom">
+      <span data-i18n="footer.copy">&copy; 2025 KSK Farmos GmbH &amp; Co. KG — Alle Rechte vorbehalten.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="lang-float">
+  <button class="lang-float-btn" id="langFloatBtn"><i data-lucide="globe"></i> DE <i data-lucide="chevron-up"></i></button>
+  <div class="lang-float-dropdown" id="langDropdown">
+    <a href="#" data-lang="de" class="active">Deutsch</a>
+    <a href="#" data-lang="en">English</a>
+    <a href="#" data-lang="ru">Русский</a>
+    <a href="#" data-lang="tr">Türkçe</a>
+    <a href="#" data-lang="pl">Polski</a>
+    <a href="#" data-lang="ro">Română</a>
+    <a href="#" data-lang="bg">Български</a>
+    <a href="#" data-lang="ua">Українська</a>
+    <a href="#" data-lang="ar">العربية</a>
+    <a href="#" data-lang="bs">Bosanski</a>
+  </div>
+</div>
+
+
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+<script src="js/main.js?v=5.22"></script>
+  <!-- KSK Chat Widget -->
+  <link rel="stylesheet" href="css/chat-widget.css?v=6">
+  <script src="js/chat-widget.js?v=3"></script>
+</body>
+</html>
