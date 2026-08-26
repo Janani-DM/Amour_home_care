@@ -203,7 +203,7 @@
   "kar.wiz.s3": "Almost Done",
   "form.nachricht": "Message (optional)",
   "form.nachricht.ph": "Tell us a bit about yourself...",
-  "form.datenschutz": "I have read and agree to the privacy policy.",
+  "form.datenschutz": "I have read and agree to the <a href=\"datenschutz.html\" target=\"_blank\">privacy policy</a>.",
   "form.absenden": "Submit Application",
   "kar.cta.h2": "Ready for the Next Step?",
   "kar.cta.p": "Apply now — it's quick and straightforward.",
@@ -414,5 +414,7 @@
   "kar.h1a": "Work where",
   "ub.social.tag": "Social Media",
   "ub.social.h2": "Follow us",
-  "ub.social.p": "Stay updated! On our social media channels, we share insights into our daily life, useful tips, and the latest news about care."
+  "ub.social.p": "Stay updated! On our social media channels, we share insights into our daily life, useful tips, and the latest news about care.",
+  "map.consent": "To view the interactive Google Map, please consent to the transfer of your data (incl. IP address) to Google.",
+  "map.load": "Load map & consent"
 }

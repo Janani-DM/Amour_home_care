@@ -3,7 +3,7 @@
   const CONFIG = {
     apiEndpoint: '/api/chat',
     welcomeMessages: {
-      de: 'Hallo! Ich bin der Assistent von KSK Farmos. Wie kann ich Ihnen helfen?',
+      de: 'Hallo! Ich bin der KI-Assistent von KSK Farmos. Wie kann ich Ihnen helfen?',
       en: 'Hello! I\'m the KSK Farmos assistant. How can I help you?',
       ru: 'Здравствуйте! Я ассистент KSK Farmos. Чем могу помочь?',
       tr: 'Merhaba! KSK Farmos asistanıyım. Size nasıl yardımcı olabilirim?',
@@ -59,7 +59,7 @@
               </svg>
             </div>
             <div>
-              <div class="ksk-chat-name">KSK Farmos Assistent</div>
+              <div class="ksk-chat-name">KSK Farmos KI-Assistent</div>
               <div class="ksk-chat-status">
                 <span class="ksk-status-dot"></span>
                 Online

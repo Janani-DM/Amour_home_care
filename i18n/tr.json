@@ -199,7 +199,7 @@
   "kar.wiz.s3": "Neredeyse Bitti",
   "form.nachricht": "Mesajınız (İsteğe bağlı)",
   "form.nachricht.ph": "Bize kısaca kendinizden bahsedin...",
-  "form.datenschutz": "Gizlilik politikasını okudum ve kabul ediyorum.",
+  "form.datenschutz": "<a href=\"datenschutz.html\" target=\"_blank\">Gizlilik politikasını</a> okudum ve kabul ediyorum.",
   "form.absenden": "Başvuruyu Gönder",
   "kar.cta.h2": "Bir Sonraki Adıma Hazır Mısınız?",
   "kar.cta.p": "Hemen başvurun — hızlı ve karmaşıklıktan uzak.",
@@ -414,5 +414,7 @@
   "kar.h1a": "Gerçekten önemli",
   "ub.social.tag": "Sosyal Medya",
   "ub.social.h2": "Bizi takip edin",
-  "ub.social.p": "Güncel kalın! Sosyal medya kanallarımızda günlük yaşamımızdan kesitler, faydalı ipuçları ve bakımla ilgili en son haberleri paylaşıyoruz."
+  "ub.social.p": "Güncel kalın! Sosyal medya kanallarımızda günlük yaşamımızdan kesitler, faydalı ipuçları ve bakımla ilgili en son haberleri paylaşıyoruz.",
+  "map.consent": "İnteraktif Google Haritasını görüntülemek için, lütfen verilerinizin (IP adresi dahil) Google'a aktarılmasına izin verin.",
+  "map.load": "Haritayı yükle ve onayla"
 }

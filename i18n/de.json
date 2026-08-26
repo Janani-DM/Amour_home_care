@@ -205,7 +205,7 @@
   "kar.wiz.s3": "Fast geschafft",
   "form.nachricht": "Nachricht (optional)",
   "form.nachricht.ph": "Erzählen Sie kurz von sich...",
-  "form.datenschutz": "Ich habe die Datenschutzerklärung gelesen und stimme zu.",
+  "form.datenschutz": "Ich habe die <a href=\"datenschutz.html\" target=\"_blank\">Datenschutzerklärung</a> gelesen und stimme zu.",
   "wiz.senden": "Bewerbung absenden",
   "wiz.msg": "Möchten Sie uns etwas mitteilen? (optional)",
   "wiz.msg.ph": "Erzählen Sie kurz von sich...",
@@ -413,5 +413,7 @@
   "kar.h1a": "Arbeiten, wo es",
   "ub.social.tag": "Social Media",
   "ub.social.h2": "Folgen Sie uns",
-  "ub.social.p": "Bleiben Sie auf dem Laufenden! Auf unseren Social-Media-Kanälen teilen wir Einblicke in unseren Alltag, nützliche Tipps und aktuelle Neuigkeiten aus der Pflege."
+  "ub.social.p": "Bleiben Sie auf dem Laufenden! Auf unseren Social-Media-Kanälen teilen wir Einblicke in unseren Alltag, nützliche Tipps und aktuelle Neuigkeiten aus der Pflege.",
+  "map.consent": "Um die interaktive Google-Karte zu sehen, stimmen Sie bitte der Übertragung Ihrer Daten (inkl. IP-Adresse) an Google zu.",
+  "map.load": "Karte laden & zustimmen"
 }

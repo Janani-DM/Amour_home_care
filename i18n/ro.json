@@ -199,7 +199,7 @@
   "kar.wiz.s3": "Aproape Gata",
   "form.nachricht": "Mesajul Tău (Opțional)",
   "form.nachricht.ph": "Spune-ne câteva cuvinte despre tine...",
-  "form.datenschutz": "Am citit cu atenție politica de confidențialitate și sunt de acord cu ea.",
+  "form.datenschutz": "Am citit cu atenție <a href=\"datenschutz.html\" target=\"_blank\">politica de confidențialitate</a> și sunt de acord cu ea.",
   "form.absenden": "Trimite Aplicația",
   "kar.cta.h2": "Ești Pregătit Pentru Următorul Pas?",
   "kar.cta.p": "Aplică acum — este simplu, rapid și fără complicații.",
@@ -414,5 +414,7 @@
   "kar.h1a": "Lucrează acolo unde",
   "ub.social.tag": "Rețele sociale",
   "ub.social.h2": "Urmărește-ne",
-  "ub.social.p": "Fii la curent! Pe canalele noastre de social media împărtășim detalii din viața noastră de zi cu zi, sfaturi utile și cele mai recente știri despre îngrijire."
+  "ub.social.p": "Fii la curent! Pe canalele noastre de social media împărtășim detalii din viața noastră de zi cu zi, sfaturi utile și cele mai recente știri despre îngrijire.",
+  "map.consent": "Pentru a vizualiza harta interactivă Google, vă rugăm să consimțiți la transferul datelor dvs. (inclusiv adresa IP) către Google.",
+  "map.load": "Încărcați harta și consimțiți"
 }

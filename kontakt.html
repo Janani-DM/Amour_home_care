@@ -5,10 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontakt — KSK Farmos GmbH &amp; Co. KG Intensivpflegedienst</title>
   <meta name="description" content="Kontaktieren Sie KSK Farmos GmbH &amp; Co. KG — kostenlos, unverbindlich, menschlich. Telefon, E-Mail oder Kontaktformular.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;450;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=1062">
+  <link rel="stylesheet" href="css/style.css?v=1063">
   <link rel="preload" as="image" href="img/hero/mobile/hero6.webp?v=11" media="(max-width: 992px)">
   <link rel="preload" as="image" href="img/hero/desktop/hero6.webp?v=20" media="(min-width: 993px)">
   <link rel="icon" href="img/common/logo-icon.png?v=3">
@@ -158,8 +155,15 @@
         <h3 data-i18n="ub.loc1.h3">Zentrale Volkmarsen</h3>
         <p>Ehringer Weg 2b<br>34471 Volkmarsen</p>
         <p><a href="tel:056939189907">05693 / 9189907</a></p>
-        <div class="map-embed" style="margin-top:16px">
-          <iframe src="https://maps.google.com/maps?q=Ehringer%20Weg%202b,%2034471%20Volkmarsen&t=&z=14&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-embed" id="mapContainer" style="margin-top:16px; position:relative; min-height: 400px; border-radius: var(--r-xl); overflow: hidden;">
+          <div class="map-placeholder" id="mapPlaceholder">
+            <svg class="map-placeholder-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+            <p data-i18n="map.consent">Um die interaktive Google-Karte zu sehen, stimmen Sie bitte der Übertragung Ihrer Daten (inkl. IP-Adresse) an Google zu.</p>
+            <button class="btn btn-primary btn-sm" id="loadMapBtn" data-i18n="map.load">Karte laden & zustimmen</button>
+          </div>
         </div>
       </div>
     </div>
@@ -293,6 +297,31 @@ document.getElementById('kontaktForm').addEventListener('submit', async function
     this.insertBefore(alertDiv, this.firstChild);
   }
 })
+
+// ── TWO-CLICK GOOGLE MAPS ──────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  const loadMapBtn = document.getElementById('loadMapBtn');
+  if (loadMapBtn) {
+    loadMapBtn.addEventListener('click', () => {
+      const container = document.getElementById('mapContainer');
+      const placeholder = document.getElementById('mapPlaceholder');
+      
+      const iframe = document.createElement('iframe');
+      iframe.src = "https://maps.google.com/maps?q=Ehringer%20Weg%202b,%2034471%20Volkmarsen&t=&z=14&ie=UTF8&iwloc=&output=embed";
+      iframe.width = "100%";
+      iframe.height = "100%";
+      iframe.style.border = "0";
+      iframe.allowFullscreen = "";
+      iframe.loading = "lazy";
+      
+      placeholder.style.opacity = '0';
+      setTimeout(() => {
+        placeholder.style.display = 'none';
+        container.appendChild(iframe);
+      }, 300);
+    });
+  }
+});
 </script>
 </body>
 </html>

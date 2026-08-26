@@ -199,7 +199,7 @@
   "kar.wiz.s3": "Prawie Gotowe",
   "form.nachricht": "Wiadomość (opcjonalnie)",
   "form.nachricht.ph": "Napisz nam krótko o sobie...",
-  "form.datenschutz": "Przeczytałem/am politykę prywatności i zgadzam się z jej warunkami.",
+  "form.datenschutz": "Przeczytałem/am <a href=\"datenschutz.html\" target=\"_blank\">politykę prywatności</a> i zgadzam się z jej warunkami.",
   "form.absenden": "Wyślij Aplikację",
   "kar.cta.h2": "Gotowy na Następny Krok?",
   "kar.cta.p": "Aplikuj już teraz — szybko i bez zbędnych formalności.",
@@ -414,5 +414,7 @@
   "kar.h1a": "Pracuj tam, gdzie",
   "ub.social.tag": "Media społecznościowe",
   "ub.social.h2": "Śledź nas",
-  "ub.social.p": "Bądź na bieżąco! Na naszych kanałach społecznościowych dzielimy się migawkami z codziennego życia, przydatnymi wskazówkami i najnowszymi wiadomościami o opiece."
+  "ub.social.p": "Bądź na bieżąco! Na naszych kanałach społecznościowych dzielimy się migawkami z codziennego życia, przydatnymi wskazówkami i najnowszymi wiadomościami o opiece.",
+  "map.consent": "Aby zobaczyć interaktywną mapę Google, wyraź zgodę na przekazywanie swoich danych (w tym adresu IP) do Google.",
+  "map.load": "Załaduj mapę i zgódź się"
 }

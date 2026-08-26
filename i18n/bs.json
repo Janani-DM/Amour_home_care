@@ -199,7 +199,7 @@
   "kar.wiz.s3": "Skoro gotovo",
   "form.nachricht": "Poruka (opciono)",
   "form.nachricht.ph": "Recite nam nešto ukratko o sebi...",
-  "form.datenschutz": "Pročitao/la sam politiku privatnosti i slažem se sa njenim uslovima.",
+  "form.datenschutz": "Pročitao/la sam <a href=\"datenschutz.html\" target=\"_blank\">politiku privatnosti</a> i slažem se sa njenim uslovima.",
   "form.absenden": "Pošaljite prijavu",
   "kar.cta.h2": "Spremni za sljedeći korak?",
   "kar.cta.p": "Prijavite se odmah — brzo je i jednostavno.",
@@ -414,5 +414,7 @@
   "kar.h1a": "Radite tamo",
   "ub.social.tag": "Društvene mreže",
   "ub.social.h2": "Pratite nas",
-  "ub.social.p": "Budite u toku! Na našim kanalima na društvenim mrežama dijelimo uvide u naš svakodnevni život, korisne savjete i najnovije vijesti o njezi."
+  "ub.social.p": "Budite u toku! Na našim kanalima na društvenim mrežama dijelimo uvide u naš svakodnevni život, korisne savjete i najnovije vijesti o njezi.",
+  "map.consent": "Da biste vidjeli interaktivnu Google mapu, molimo vas da pristanete na prijenos vaših podataka (uključujući IP adresu) Google-u.",
+  "map.load": "Učitaj mapu i pristani"
 }
