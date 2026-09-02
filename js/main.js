@@ -442,18 +442,10 @@ document.addEventListener('DOMContentLoaded', () => {
   handleScroll();
   window.addEventListener('scroll', handleScroll, { passive: true });
 
-  // ── 2. Scroll reveal (IntersectionObserver) ───────────
-  const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        revealObserver.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.01, rootMargin: '0px 0px -10% 0px' });
-
-  document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale')
-    .forEach(el => revealObserver.observe(el));
+  // ── 2. Hero entrance ────────────────────────────────────
+  // The only animation on the site: hero text fades/settles in once, right on load.
+  document.querySelectorAll('.hero-content .hero-title, .hero-content .hero-subtitle, .hero-content .hero-actions')
+    .forEach(el => el.classList.add('visible'));
 
   // ── 3. Counter animation ───────────────────────────────
   const animateCounter = (el) => {

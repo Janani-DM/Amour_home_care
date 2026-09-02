@@ -416,5 +416,6 @@
   "ub.social.h2": "Bizi takip edin",
   "ub.social.p": "Güncel kalın! Sosyal medya kanallarımızda günlük yaşamımızdan kesitler, faydalı ipuçları ve bakımla ilgili en son haberleri paylaşıyoruz.",
   "map.consent": "İnteraktif Google Haritasını görüntülemek için, lütfen verilerinizin (IP adresi dahil) Google'a aktarılmasına izin verin.",
-  "map.load": "Haritayı yükle ve onayla"
+  "map.load": "Haritayı yükle ve onayla",
+  "map.loading": "Harita yükleniyor…"
 }

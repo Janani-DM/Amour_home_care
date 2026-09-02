@@ -416,5 +416,6 @@
   "ub.social.h2": "Follow us",
   "ub.social.p": "Stay updated! On our social media channels, we share insights into our daily life, useful tips, and the latest news about care.",
   "map.consent": "To view the interactive Google Map, please consent to the transfer of your data (incl. IP address) to Google.",
-  "map.load": "Load map & consent"
+  "map.load": "Load map & consent",
+  "map.loading": "Loading map…"
 }

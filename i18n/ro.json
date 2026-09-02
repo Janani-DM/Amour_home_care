@@ -416,5 +416,6 @@
   "ub.social.h2": "Urmărește-ne",
   "ub.social.p": "Fii la curent! Pe canalele noastre de social media împărtășim detalii din viața noastră de zi cu zi, sfaturi utile și cele mai recente știri despre îngrijire.",
   "map.consent": "Pentru a vizualiza harta interactivă Google, vă rugăm să consimțiți la transferul datelor dvs. (inclusiv adresa IP) către Google.",
-  "map.load": "Încărcați harta și consimțiți"
+  "map.load": "Încărcați harta și consimțiți",
+  "map.loading": "Se încarcă harta…"
 }

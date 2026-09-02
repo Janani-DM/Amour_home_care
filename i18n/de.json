@@ -415,5 +415,6 @@
   "ub.social.h2": "Folgen Sie uns",
   "ub.social.p": "Bleiben Sie auf dem Laufenden! Auf unseren Social-Media-Kanälen teilen wir Einblicke in unseren Alltag, nützliche Tipps und aktuelle Neuigkeiten aus der Pflege.",
   "map.consent": "Um die interaktive Google-Karte zu sehen, stimmen Sie bitte der Übertragung Ihrer Daten (inkl. IP-Adresse) an Google zu.",
-  "map.load": "Karte laden & zustimmen"
+  "map.load": "Karte laden & zustimmen",
+  "map.loading": "Karte wird geladen…"
 }

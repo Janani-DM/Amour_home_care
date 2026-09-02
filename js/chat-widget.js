@@ -103,13 +103,20 @@
     document.body.appendChild(widget)
   }
 
+  // Экранировать HTML-спецсимволы, чтобы пользовательский/ИИ-текст нельзя было вставить как разметку
+  function escapeHtml(str) {
+    const div = document.createElement('div')
+    div.textContent = str
+    return div.innerHTML
+  }
+
   // Добавить сообщение в чат
   function addMessage(text, isBot) {
     const messagesEl = document.getElementById('kskMessages')
     const div = document.createElement('div')
     div.className = `ksk-msg ${isBot ? 'ksk-msg-bot' : 'ksk-msg-user'}`
-    
-    let formattedText = text.replace(/\n/g, '<br>')
+
+    let formattedText = escapeHtml(text).replace(/\n/g, '<br>')
     if (isBot) {
       // Регулярное выражение для поиска markdown-ссылок [Text](URL)
       const markdownLinkRegex = /\[([^\]]+)\]\(([^)]+)\)/g

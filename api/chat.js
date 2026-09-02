@@ -44,7 +44,7 @@ UNSERE EXPERTISE (WAS WIR TUN):
 KOSTENÜBERNAHME & ABLAUF:
 - Die Kosten für die 24h-Intensivpflege werden in der Regel VOLLSTÄNDIG von der Krankenkasse (SGB V) und Pflegekasse (SGB XI) übernommen.
 - Da es primär über §37 SGB V läuft, ist es nicht direkt an den Pflegegrad gebunden (ein Pflegegrad ermöglicht jedoch Zusatzleistungen).
-- Die medizinischen Geräte werden komplett von की Kasse gestellt.
+- Die medizinischen Geräte werden komplett von der Kasse gestellt.
 - Sollten Kostenanteile übrig bleiben, helfen wir bei der Beantragung bei Ämtern (Sozialamt, Beihilfe, Regierungspräsidium).
 - WICHTIG: Nach Erhalt einer Vollmacht übernehmen wir sämtliche Verhandlungen und den lästigen Papierkram mit den Kassen komplett für die Familie!
 - Dauer: Vom Erstgespräch bis zum Start vergehen ca. 4–6 Wochen.

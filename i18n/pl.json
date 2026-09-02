@@ -416,5 +416,6 @@
   "ub.social.h2": "Śledź nas",
   "ub.social.p": "Bądź na bieżąco! Na naszych kanałach społecznościowych dzielimy się migawkami z codziennego życia, przydatnymi wskazówkami i najnowszymi wiadomościami o opiece.",
   "map.consent": "Aby zobaczyć interaktywną mapę Google, wyraź zgodę na przekazywanie swoich danych (w tym adresu IP) do Google.",
-  "map.load": "Załaduj mapę i zgódź się"
+  "map.load": "Załaduj mapę i zgódź się",
+  "map.loading": "Ładowanie mapy…"
 }

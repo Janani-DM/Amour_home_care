@@ -416,5 +416,6 @@
   "ub.social.h2": "Pratite nas",
   "ub.social.p": "Budite u toku! Na našim kanalima na društvenim mrežama dijelimo uvide u naš svakodnevni život, korisne savjete i najnovije vijesti o njezi.",
   "map.consent": "Da biste vidjeli interaktivnu Google mapu, molimo vas da pristanete na prijenos vaših podataka (uključujući IP adresu) Google-u.",
-  "map.load": "Učitaj mapu i pristani"
+  "map.load": "Učitaj mapu i pristani",
+  "map.loading": "Mapa se učitava…"
 }

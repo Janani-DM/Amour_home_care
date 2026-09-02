@@ -9,9 +9,9 @@
   <link rel="preload" as="image" href="img/hero/mobile/hero6.webp?v=11" media="(max-width: 992px)">
   <link rel="preload" as="image" href="img/hero/desktop/hero6.webp?v=20" media="(min-width: 993px)">
   <link rel="icon" href="img/common/logo-icon.png?v=3">
-  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="js/vendor/emailjs-4.4.1.min.js"></script>
   <script>emailjs.init('FvtHmqXFbDTGygZuv')</script>
-  <script src="https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="js/vendor/lenis-1.0.42.min.js"></script>
   <!-- OpenGraph Social Metadata -->
   <meta property="og:title" content="Kontakt — KSK Farmos GmbH &amp; Co. KG Intensivpflegedienst">
   <meta property="og:description" content="Kontaktieren Sie KSK Farmos GmbH &amp; Co. KG — kostenlos, unverbindlich, menschlich. Telefon, E-Mail oder Kontaktformular.">
@@ -203,8 +203,8 @@
 </div>
 
 
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
-<script src="js/main.js?v=5.22"></script>
+<script src="js/vendor/lucide-1.39.0.min.js"></script>
+<script src="js/main.js?v=5.25"></script>
   <!-- KSK Chat Widget -->
   <link rel="stylesheet" href="css/chat-widget.css?v=6">
   <script src="js/chat-widget.js?v=3"></script>
@@ -305,20 +305,27 @@ document.addEventListener('DOMContentLoaded', () => {
     loadMapBtn.addEventListener('click', () => {
       const container = document.getElementById('mapContainer');
       const placeholder = document.getElementById('mapPlaceholder');
-      
+
+      // Sofort auf Ladeanzeige umschalten, statt den Platzhalter auszublenden
+      placeholder.innerHTML = '<div class="map-spinner"></div><p data-i18n="map.loading">Karte wird geladen…</p>';
+
       const iframe = document.createElement('iframe');
       iframe.src = "https://maps.google.com/maps?q=Ehringer%20Weg%202b,%2034471%20Volkmarsen&t=&z=14&ie=UTF8&iwloc=&output=embed";
-      iframe.width = "100%";
-      iframe.height = "100%";
+      iframe.style.position = "absolute";
+      iframe.style.top = "0";
+      iframe.style.left = "0";
+      iframe.style.width = "100%";
+      iframe.style.height = "100%";
       iframe.style.border = "0";
       iframe.allowFullscreen = "";
-      iframe.loading = "lazy";
-      
-      placeholder.style.opacity = '0';
-      setTimeout(() => {
-        placeholder.style.display = 'none';
-        container.appendChild(iframe);
-      }, 300);
+
+      iframe.addEventListener('load', () => {
+        iframe.classList.add('loaded');
+        placeholder.style.opacity = '0';
+        setTimeout(() => placeholder.remove(), 300);
+      });
+
+      container.appendChild(iframe);
     });
   }
 });

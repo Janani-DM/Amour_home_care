@@ -47,7 +47,7 @@
   --ease-out:cubic-bezier(0.16,1,0.3,1);
   --ease-expo:cubic-bezier(0.22,1,0.36,1);
   --ease-spring:cubic-bezier(0.34,1.56,0.64,1);
-  --t-fast:160ms;--t-base:280ms;--t-slow:520ms;
+  --t-fast:160ms;--t-base:280ms;--t-slow:520ms;--t-reveal:800ms;
 }
 
 /* ── RESET ─────────────────────────────────────────────────── */
@@ -65,6 +65,7 @@ button{font-family:var(--sans)}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.25;letter-spacing:-0.02em;color:var(--text-primary);margin-bottom:1.5rem;overflow-wrap:break-word;word-break:break-word}
 h1{font-size:clamp(3.2rem, 6vw, 5.2rem);line-height:1.12}
 h2{font-size:clamp(2rem,3.5vw,3.1rem)}
+.beratung-title{font-size:clamp(2rem,3.5vw,3.1rem)}
 h3{font-size:clamp(1.25rem,2vw,1.6rem)}
 h4{font-size:1.05rem;font-family:var(--sans);font-weight:600;letter-spacing:-0.01em;line-height:1.4;margin-bottom:1rem}
 p{color:var(--text-secondary);line-height:1.75;margin-bottom:1.25rem}
@@ -603,8 +604,6 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, em, cite, .hero-title, .hero-subti
     align-items: center !important;
     gap: 8px !important;
     z-index: 5 !important;
-    opacity: 1 !important;
-    transform: none !important;
   }
   .hero-cutout .hero-actions .btn {
     width: 100% !important;
@@ -944,75 +943,39 @@ html.lenis { height: auto; }
 .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
 .lenis.lenis-stopped { overflow: hidden; }
 
-/* ── SCROLL REVEAL ───────────────────────────────────────────── */
-/* ── SCROLL REVEAL ANIMATIONS ────────────────────────────────── */
-.reveal {
+/* ── HERO ENTRANCE ───────────────────────────────────────────── */
+/* The only animation left on the site: hero text settles gently into place on load. */
+.hero-content .hero-title,
+.hero-content .hero-subtitle,
+.hero-content .hero-actions {
   opacity: 0;
-  transform: translateY(25px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  transform: translateY(20px);
+  transition: opacity 800ms var(--ease-out), transform 800ms var(--ease-out);
 }
-.reveal-left {
-  opacity: 0;
-  transform: translateX(-30px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.reveal-right {
-  opacity: 0;
-  transform: translateX(30px);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-.reveal-scale {
-  opacity: 0;
-  transform: scale(0.96);
-  transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.reveal.visible {
+.hero-content .hero-title.visible,
+.hero-content .hero-subtitle.visible,
+.hero-content .hero-actions.visible {
   opacity: 1;
   transform: translateY(0);
 }
-.reveal-left.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-.reveal-right.visible {
-  opacity: 1;
-  transform: translateX(0);
-}
-.reveal-scale.visible {
-  opacity: 1;
-  transform: scale(1);
-}
+.hero-content .hero-subtitle { transition-delay: 100ms; }
+.hero-content .hero-actions { transition-delay: 200ms; }
 
-/* Hero elements specific reveal (appears from inside) */
-.hero-content .reveal, .hero-content .reveal-scale {
-  transform: scale(0.92);
+/* On the full-bleed photo hero, the title's position is centered via transform — combine with the entrance motion instead of fighting it. */
+.hero-cutout .hero-title {
+  transform: translateY(calc(-50% + 20px)) !important;
 }
-.hero-content .reveal.visible, .hero-content .reveal-scale.visible {
-  transform: scale(1);
+.hero-cutout .hero-title.visible {
+  transform: translateY(-50%) !important;
 }
-
-/* Stagger Delays (Both legacy reveal-d and new stagger- classes) */
-.reveal-d1, .stagger-1 { transition-delay: 100ms; }
-.reveal-d2, .stagger-2 { transition-delay: 200ms; }
-.reveal-d3, .stagger-3 { transition-delay: 300ms; }
-.reveal-d4, .stagger-4 { transition-delay: 400ms; }
-.reveal-d5, .stagger-5 { transition-delay: 500ms; }
-.reveal-d6, .stagger-6 { transition-delay: 600ms; }
-.reveal-d7, .stagger-7 { transition-delay: 700ms; }
-.reveal-d8, .stagger-8 { transition-delay: 800ms; }
+@media (min-width: 993px) {
+  .hero-cutout .hero-title {
+    transform: translateY(20px) !important;
+  }
+  .hero-cutout .hero-title.visible {
+    transform: translateY(0) !important;
+  }
+}
 
 /* ── UTILITIES ───────────────────────────────────────────────── */
 .divider{width:56px;height:2px;background:var(--violet);margin:var(--sp-3) 0}
@@ -2402,4 +2365,23 @@ html[dir="rtl"] .hero-home-photo {
   color: var(--text-muted);
   max-width: 400px;
   margin-bottom: 20px;
+}
+.map-spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid var(--border);
+  border-top-color: var(--violet);
+  border-radius: 50%;
+  animation: map-spin 0.8s linear infinite;
+  margin-bottom: 16px;
+}
+@keyframes map-spin {
+  to { transform: rotate(360deg); }
+}
+.map-embed iframe {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.map-embed iframe.loaded {
+  opacity: 1;
 }
