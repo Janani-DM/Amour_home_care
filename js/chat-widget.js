@@ -21,7 +21,7 @@
   let messages = []
   let isOpen = false
   let isLoading = false
-  let currentLang = document.documentElement.lang || 'de'
+  let currentLang = document.documentElement.lang || 'en'
 
   // Получить приветствие на текущем языке
   function getWelcome() {
@@ -38,7 +38,7 @@
     const widget = document.createElement('div')
     widget.id = 'ksk-chat'
     widget.innerHTML = `
-      <button class="ksk-chat-btn" id="kskChatBtn" aria-label="Chat öffnen">
+      <button class="ksk-chat-btn" id="kskChatBtn" aria-label="Open chat">
         <span class="ksk-chat-btn-inner">
           <svg class="ksk-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
@@ -59,14 +59,14 @@
               </svg>
             </div>
             <div>
-              <div class="ksk-chat-name">KSK Farmos KI-Assistent</div>
+              <div class="ksk-chat-name">KSK Farmos AI Assistant</div>
               <div class="ksk-chat-status">
                 <span class="ksk-status-dot"></span>
                 Online
               </div>
             </div>
           </div>
-          <button class="ksk-chat-close" onclick="kskChat.close()" aria-label="Schließen">
+          <button class="ksk-chat-close" onclick="kskChat.close()" aria-label="Close">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
@@ -87,11 +87,11 @@
             type="text"
             class="ksk-chat-input"
             id="kskInput"
-            placeholder="Ihre Frage..."
+            placeholder="Your question..."
             onkeydown="if(event.key==='Enter')kskChat.send()"
             maxlength="500"
           >
-          <button class="ksk-chat-send" onclick="kskChat.send()" aria-label="Senden">
+          <button class="ksk-chat-send" onclick="kskChat.send()" aria-label="Send">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="22" y1="2" x2="11" y2="13"/>
               <polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -181,11 +181,11 @@
         addMessage(data.message, true)
         messages.push({ role: 'assistant', content: data.message })
       } else {
-        addMessage('Entschuldigung, ein Fehler ist aufgetreten. Bitte rufen Sie uns an: 05693 / 9189907', true)
+        addMessage('Sorry, something went wrong. Please call us at: 05693 / 9189907', true)
       }
     } catch (error) {
       hideLoader()
-      addMessage('Entschuldigung, ein Fehler ist aufgetreten. Bitte rufen Sie uns an: 05693 / 9189907', true)
+      addMessage('Sorry, something went wrong. Please call us at: 05693 / 9189907', true)
     }
 
     isLoading = false
@@ -245,7 +245,7 @@
 
     // Синхронизировать язык с lang-switcher сайта
     const observer = new MutationObserver(() => {
-      currentLang = document.documentElement.lang || 'de'
+      currentLang = document.documentElement.lang || 'en'
     })
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ['lang'] })
   })

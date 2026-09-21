@@ -5,10 +5,10 @@
 
 // ── i18n Translation Engine ─────────────────────────────
 const I18N = {
-  current: localStorage.getItem('ksk-lang') || 'de',
+  current: localStorage.getItem('ksk-lang') || 'en',
   cache: {},
-  codes: ['de','en','ru','tr','pl','ro','bg','ua','ar','bs'],
-  labels: {de:'Deutsch',en:'English',ru:'Русский',tr:'Türkçe',pl:'Polski',ro:'Română',bg:'Български',ua:'Українська',ar:'العربية',bs:'Bosanski'},
+  codes: ['en','ta','hi','fr'],
+  labels: {en:'English',ta:'தமிழ்',hi:'हिन्दी',fr:'Français'},
 
   async load(lang) {
     if (this.cache[lang]) return this.cache[lang];

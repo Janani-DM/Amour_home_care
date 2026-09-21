@@ -67,7 +67,7 @@
 
 /* Хедер */
 .ksk-chat-header {
-  background: rgba(107, 63, 160, 0.55) !important; padding: 16px 20px;
+  background: rgba(18, 38, 63, 0.55) !important; padding: 16px 20px;
   display: flex; align-items: center; justify-content: space-between;
   flex-shrink: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
@@ -109,7 +109,7 @@
   box-shadow: var(--shadow-xs);
 }
 .ksk-msg-user .ksk-msg-bubble {
-  background: rgba(107, 63, 160, 0.6) !important; color: white !important;
+  background: rgba(18, 38, 63, 0.6) !important; color: white !important;
   border: 1px solid rgba(255, 255, 255, 0.15) !important;
   border-bottom-right-radius: 4px;
 }
@@ -142,7 +142,7 @@
   transform:translateX(-100%);transition:transform 0.55s var(--ease);pointer-events:none;
 }
 .ksk-quick-btn:hover::after { transform: translateX(100%); }
-.ksk-quick-btn:hover { background: rgba(167, 139, 250, 0.2) !important; color: #cbb5f0 !important; transform: translateY(-2px) scale(1.04); box-shadow: 0 4px 10px rgba(107,63,160,0.15); border-color: #cbb5f0 !important; }
+.ksk-quick-btn:hover { background: rgba(201, 164, 92, 0.2) !important; color: #C9A45C !important; transform: translateY(-2px) scale(1.04); box-shadow: 0 4px 10px rgba(18, 38, 63,0.15); border-color: #C9A45C !important; }
 .ksk-quick-btn:active { transform: scale(0.96) !important; }
 
 /* Инпут */
@@ -157,7 +157,7 @@
   color: #ffffff !important; background: rgba(255, 255, 255, 0.08) !important; outline: none;
   transition: border-color var(--t-fast);
 }
-.ksk-chat-input:focus { border-color: #cbb5f0 !important; }
+.ksk-chat-input:focus { border-color: #C9A45C !important; }
 .ksk-chat-input::placeholder { color: rgba(255, 255, 255, 0.45) !important; }
 .ksk-chat-send {
   width: 38px; height: 38px; border-radius: 50%;
