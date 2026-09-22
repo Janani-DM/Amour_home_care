@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ksk-farmos.de/sitemap.xml
+Sitemap: https://amour-home-care.vercel.app/sitemap.xml
