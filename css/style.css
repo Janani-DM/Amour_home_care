@@ -16,17 +16,17 @@
   --purple:#4A456B;         /* Muted purple (decorative only) */
   --gold:#C9A45C;           /* Warm Gold */
   --gold-soft:#E8D7A8;      /* Soft Gold / Cream */
-  --cream:#C6D3D8;          /* Main page background (sampled from reference) */
+  --cream:#FAF7EC;          /* Soft warm background */
   --warm-white:#FFFDF8;     /* Clean surface */
   --olive:#65784A;
   --brown:#5A4438;
   --accent:#C9A45C;
-  --background:#C6D3D8;
+  --background:#FAF7EC;
   --soft-gold:#E8D7A8;
   --surface:#FFFDF8;
 
   /* existing token names remapped semantically onto the brand palette */
-  --white:#C6D3D8;
+  --white:#FAF7EC;
   --off-white:#FFFDF8;
   --gray-50:#E8D7A8;
   --gray-100:#E8D7A8;
@@ -515,7 +515,7 @@ body, h1, h2, h3, h4, h5, h6, p, li, a, span, em, cite, .hero-title, .hero-subti
   .hero-cutout ~ .section-dark { background-color: var(--gray-900) !important; }
   .hero-cutout ~ .section-violet { background-color: var(--violet) !important; }
   .hero-cutout ~ .section-compact { background-color: var(--gray-50); }
-  .hero-cutout ~ .section-edge-photo { background-color: rgb(var(--bg-rgb, 198, 211, 216)) !important; }
+  .hero-cutout ~ .section-edge-photo { background-color: rgb(var(--bg-rgb, 250, 247, 236)) !important; }
   /* Depth shadow on first content section */
   .hero-cutout + section,
   .hero-cutout + .section-edge-photo {
@@ -1020,7 +1020,7 @@ html.lenis { height: auto; }
 .dual-cta-left .btn, .dual-cta-right .btn{margin-top:auto}
 
 /* ── ANCHOR NAV ─────────────────────────────────────────────── */
-.anchor-nav{position:sticky;top:var(--header-h);z-index:40;background:rgba(198, 211, 216, 0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-100);border-top:1px solid var(--gray-100);padding:14px 0;margin-top:var(--sp-2)}
+.anchor-nav{position:sticky;top:var(--header-h);z-index:40;background:rgba(250, 247, 236, 0.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--gray-100);border-top:1px solid var(--gray-100);padding:14px 0;margin-top:var(--sp-2)}
 .anchor-pills{display:flex;justify-content:center;gap:10px;max-width:var(--max-w);margin:0 auto;padding:0 var(--pad-x);overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
 .anchor-pills::-webkit-scrollbar{display:none}
 .anchor-pill{display:inline-flex;align-items:center;padding:10px 24px;font-size:0.85rem;font-weight:500;font-family:var(--sans);color:var(--text-secondary);background:var(--gray-50);border:1px solid var(--gray-100);border-radius:var(--r-full);cursor:pointer;white-space:nowrap;flex-shrink:0}
@@ -1439,7 +1439,7 @@ html[dir="rtl"] .hero-home-photo {
 .section-edge-photo {
   position: relative;
   overflow: hidden;
-  --bg-rgb: 198, 211, 216; /* Main background #C6D3D8 */
+  --bg-rgb: 250, 247, 236; /* Amour soft cream #FAF7EC */
   background: rgb(var(--bg-rgb));
 }
 
@@ -2246,7 +2246,7 @@ html[dir="rtl"] .hero-home-photo {
   .hero-fs ~ .section-dark { background-color: var(--gray-900) !important; }
   .hero-fs ~ .section-violet { background-color: var(--violet) !important; }
   .hero-fs ~ .section-compact { background-color: var(--gray-50) !important; }
-  .hero-fs ~ .section-edge-photo { background-color: rgb(var(--bg-rgb, 198, 211, 216)) !important; }
+  .hero-fs ~ .section-edge-photo { background-color: rgb(var(--bg-rgb, 250, 247, 236)) !important; }
   
   /* Depth shadow and rounded top corners on first content section after hero-fs on desktop */
   .hero-fs + section,
