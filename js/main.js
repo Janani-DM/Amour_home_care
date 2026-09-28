@@ -5,10 +5,10 @@
 
 // ── i18n Translation Engine ─────────────────────────────
 const I18N = {
-  current: localStorage.getItem('amour-lang') || 'en',
+  current: ['en','ta','hi'].includes(localStorage.getItem('amour-lang')) ? localStorage.getItem('amour-lang') : 'en',
   cache: {},
-  codes: ['en','ta','hi','fr'],
-  labels: {en:'English',ta:'தமிழ்',hi:'हिन्दी',fr:'Français'},
+  codes: ['en','ta','hi'],
+  labels: {en:'English',ta:'தமிழ்',hi:'हिन्दी'},
 
   async load(lang) {
     if (this.cache[lang]) return this.cache[lang];
