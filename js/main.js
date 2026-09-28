@@ -1,11 +1,11 @@
 // ═══════════════════════════════════════
-// KSK Farmos GmbH & Co. KG — main.js v3.0
+// Amour Total Care Home — main.js v3.0
 // Fully calibrated: lang, FAQ, i18n icons
 // ═══════════════════════════════════════
 
 // ── i18n Translation Engine ─────────────────────────────
 const I18N = {
-  current: localStorage.getItem('ksk-lang') || 'en',
+  current: localStorage.getItem('amour-lang') || 'en',
   cache: {},
   codes: ['en','ta','hi','fr'],
   labels: {en:'English',ta:'தமிழ்',hi:'हिन्दी',fr:'Français'},
@@ -107,7 +107,7 @@ const I18N = {
     const data = await this.load(lang);
     if (!data) return;
     this.current = lang;
-    localStorage.setItem('ksk-lang', lang);
+    localStorage.setItem('amour-lang', lang);
     this.apply(data);
     if (typeof lucide !== 'undefined') lucide.createIcons();
     document.documentElement.lang = lang === 'ua' ? 'uk' : lang;
@@ -393,7 +393,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ── COOKIE BANNER ──────────────────────────────────────────────
-  if (!localStorage.getItem('ksk-cookies')) {
+  if (!localStorage.getItem('amour-cookies')) {
     const banner = document.createElement('div');
     banner.className = 'cookie-banner';
     banner.innerHTML = `
@@ -414,7 +414,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const closeBanner = (val) => {
-      localStorage.setItem('ksk-cookies', val);
+      localStorage.setItem('amour-cookies', val);
       banner.classList.add('hidden');
       setTimeout(() => banner.remove(), 400);
     };

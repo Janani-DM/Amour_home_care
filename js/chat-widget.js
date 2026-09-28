@@ -3,13 +3,13 @@
   const CONFIG = {
     apiEndpoint: '/api/chat',
     welcomeMessages: {
-      de: 'Hallo! Ich bin der KI-Assistent von KSK Farmos. Wie kann ich Ihnen helfen?',
-      en: 'Hello! I\'m the KSK Farmos assistant. How can I help you?',
-      ru: 'Здравствуйте! Я ассистент KSK Farmos. Чем могу помочь?',
-      tr: 'Merhaba! KSK Farmos asistanıyım. Size nasıl yardımcı olabilirim?',
-      pl: 'Dzień dobry! Jestem asystentem KSK Farmos. Jak mogę pomóc?',
-      ar: 'مرحباً! أنا مساعد KSK Farmos. كيف يمكنني مساعدتك؟',
-      uk: 'Вітаю! Я асистент KSK Farmos. Чим можу допомогти?'
+      de: 'Hallo! Ich bin der KI-Assistent von Amour Total Care Home. Wie kann ich Ihnen helfen?',
+      en: 'Hello! I\'m the Amour Total Care Home assistant. How can I help you?',
+      ru: 'Здравствуйте! Я ассистент Amour Total Care Home. Чем могу помочь?',
+      tr: 'Merhaba! Amour Total Care Home asistanıyım. Size nasıl yardımcı olabilirim?',
+      pl: 'Dzień dobry! Jestem asystentem Amour Total Care Home. Jak mogę pomóc?',
+      ar: 'مرحباً! أنا مساعد Amour Total Care Home. كيف يمكنني مساعدتك؟',
+      uk: 'Вітаю! Я асистент Amour Total Care Home. Чим можу допомогти?'
     },
     quickReplies: {
       de: ['Kostenübernahme?', 'Standorte?', 'Karriere?', 'Beratung anfragen'],
@@ -25,73 +25,73 @@
 
   // Получить приветствие на текущем языке
   function getWelcome() {
-    return CONFIG.welcomeMessages[currentLang] || CONFIG.welcomeMessages.de
+    return CONFIG.welcomeMessages[currentLang] || CONFIG.welcomeMessages.en
   }
 
   // Получить быстрые ответы
   function getQuickReplies() {
-    return CONFIG.quickReplies[currentLang] || CONFIG.quickReplies.de
+    return CONFIG.quickReplies[currentLang] || CONFIG.quickReplies.en
   }
 
   // Создать HTML виджета
   function createWidget() {
     const widget = document.createElement('div')
-    widget.id = 'ksk-chat'
+    widget.id = 'amour-chat'
     widget.innerHTML = `
-      <button class="ksk-chat-btn" id="kskChatBtn" aria-label="Open chat">
-        <span class="ksk-chat-btn-inner">
-          <svg class="ksk-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <button class="amour-chat-btn" id="amourChatBtn" aria-label="Open chat">
+        <span class="amour-chat-btn-inner">
+          <svg class="amour-icon-chat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
           </svg>
-          <svg class="ksk-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+          <svg class="amour-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
             <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </span>
-        <span class="ksk-unread" id="kskUnread" style="display:none">1</span>
+        <span class="amour-unread" id="amourUnread" style="display:none">1</span>
       </button>
 
-      <div class="ksk-chat-window" id="kskWindow" style="display:none">
-        <div class="ksk-chat-header">
-          <div class="ksk-chat-header-info">
-            <div class="ksk-chat-avatar">
+      <div class="amour-chat-window" id="amourWindow" style="display:none">
+        <div class="amour-chat-header">
+          <div class="amour-chat-header-info">
+            <div class="amour-chat-avatar">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
               </svg>
             </div>
             <div>
-              <div class="ksk-chat-name">KSK Farmos AI Assistant</div>
-              <div class="ksk-chat-status">
-                <span class="ksk-status-dot"></span>
+              <div class="amour-chat-name">Amour Total Care Home Assistant</div>
+              <div class="amour-chat-status">
+                <span class="amour-status-dot"></span>
                 Online
               </div>
             </div>
           </div>
-          <button class="ksk-chat-close" onclick="kskChat.close()" aria-label="Close">
+          <button class="amour-chat-close" onclick="amourChat.close()" aria-label="Close">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
             </svg>
           </button>
         </div>
 
-        <div class="ksk-chat-messages" id="kskMessages">
-          <div class="ksk-msg ksk-msg-bot">
-            <div class="ksk-msg-bubble">${getWelcome()}</div>
+        <div class="amour-chat-messages" id="amourMessages">
+          <div class="amour-msg amour-msg-bot">
+            <div class="amour-msg-bubble">${getWelcome()}</div>
           </div>
-          <div class="ksk-quick-replies" id="kskQuick">
-            ${getQuickReplies().map(r => `<button class="ksk-quick-btn" onclick="kskChat.send('${r}')">${r}</button>`).join('')}
+          <div class="amour-quick-replies" id="amourQuick">
+            ${getQuickReplies().map(r => `<button class="amour-quick-btn" onclick="amourChat.send('${r}')">${r}</button>`).join('')}
           </div>
         </div>
 
-        <div class="ksk-chat-input-wrap">
+        <div class="amour-chat-input-wrap">
           <input
             type="text"
-            class="ksk-chat-input"
-            id="kskInput"
+            class="amour-chat-input"
+            id="amourInput"
             placeholder="Your question..."
-            onkeydown="if(event.key==='Enter')kskChat.send()"
+            onkeydown="if(event.key==='Enter')amourChat.send()"
             maxlength="500"
           >
-          <button class="ksk-chat-send" onclick="kskChat.send()" aria-label="Send">
+          <button class="amour-chat-send" onclick="amourChat.send()" aria-label="Send">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <line x1="22" y1="2" x2="11" y2="13"/>
               <polygon points="22 2 15 22 11 13 2 9 22 2"/>
@@ -112,9 +112,9 @@
 
   // Добавить сообщение в чат
   function addMessage(text, isBot) {
-    const messagesEl = document.getElementById('kskMessages')
+    const messagesEl = document.getElementById('amourMessages')
     const div = document.createElement('div')
-    div.className = `ksk-msg ${isBot ? 'ksk-msg-bot' : 'ksk-msg-user'}`
+    div.className = `amour-msg ${isBot ? 'amour-msg-bot' : 'amour-msg-user'}`
 
     let formattedText = escapeHtml(text).replace(/\n/g, '<br>')
     if (isBot) {
@@ -123,23 +123,23 @@
       formattedText = formattedText.replace(markdownLinkRegex, (match, linkText, url) => {
         const isExternal = url.startsWith('http') || url.startsWith('tel:') || url.startsWith('mailto:')
         const target = isExternal ? 'target="_blank" rel="noopener noreferrer"' : ''
-        return `<a href="${url}" class="ksk-chat-link-btn" ${target}>${linkText}</a>`
+        return `<a href="${url}" class="amour-chat-link-btn" ${target}>${linkText}</a>`
       })
     }
 
-    div.innerHTML = `<div class="ksk-msg-bubble">${formattedText}</div>`
+    div.innerHTML = `<div class="amour-msg-bubble">${formattedText}</div>`
     messagesEl.appendChild(div)
     messagesEl.scrollTop = messagesEl.scrollHeight
   }
 
   // Показать лоадер
   function showLoader() {
-    const messagesEl = document.getElementById('kskMessages')
+    const messagesEl = document.getElementById('amourMessages')
     const div = document.createElement('div')
-    div.className = 'ksk-msg ksk-msg-bot ksk-loader-wrap'
-    div.id = 'kskLoader'
+    div.className = 'amour-msg amour-msg-bot amour-loader-wrap'
+    div.id = 'amourLoader'
     div.innerHTML = `
-      <div class="ksk-msg-bubble ksk-loader">
+      <div class="amour-msg-bubble amour-loader">
         <span></span><span></span><span></span>
       </div>
     `
@@ -149,7 +149,7 @@
 
   // Убрать лоадер
   function hideLoader() {
-    const loader = document.getElementById('kskLoader')
+    const loader = document.getElementById('amourLoader')
     if (loader) loader.remove()
   }
 
@@ -158,7 +158,7 @@
     if (!text || isLoading) return
 
     // Убрать быстрые ответы после первого сообщения
-    const quick = document.getElementById('kskQuick')
+    const quick = document.getElementById('amourQuick')
     if (quick) quick.remove()
 
     addMessage(text, false)
@@ -181,36 +181,36 @@
         addMessage(data.message, true)
         messages.push({ role: 'assistant', content: data.message })
       } else {
-        addMessage('Sorry, something went wrong. Please call us at: 05693 / 9189907', true)
+        addMessage('Sorry, something went wrong. Please call us at: +91 88071 08378', true)
       }
     } catch (error) {
       hideLoader()
-      addMessage('Sorry, something went wrong. Please call us at: 05693 / 9189907', true)
+      addMessage('Sorry, something went wrong. Please call us at: +91 88071 08378', true)
     }
 
     isLoading = false
   }
 
   // Публичный API
-  window.kskChat = {
+  window.amourChat = {
     open() {
       isOpen = true
-      document.getElementById('kskWindow').style.display = 'flex'
-      document.querySelector('.ksk-icon-chat').style.display = 'none'
-      document.querySelector('.ksk-icon-close').style.display = 'block'
-      document.getElementById('kskUnread').style.display = 'none'
+      document.getElementById('amourWindow').style.display = 'flex'
+      document.querySelector('.amour-icon-chat').style.display = 'none'
+      document.querySelector('.amour-icon-close').style.display = 'block'
+      document.getElementById('amourUnread').style.display = 'none'
     },
     close() {
       isOpen = false
-      document.getElementById('kskWindow').style.display = 'none'
-      document.querySelector('.ksk-icon-chat').style.display = 'block'
-      document.querySelector('.ksk-icon-close').style.display = 'none'
+      document.getElementById('amourWindow').style.display = 'none'
+      document.querySelector('.amour-icon-chat').style.display = 'block'
+      document.querySelector('.amour-icon-close').style.display = 'none'
     },
     toggle() {
       isOpen ? this.close() : this.open()
     },
     send(text) {
-      const input = document.getElementById('kskInput')
+      const input = document.getElementById('amourInput')
       const msg = text || input.value.trim()
       if (!msg) return
       input.value = ''
@@ -221,12 +221,12 @@
   // Инициализация
   document.addEventListener('DOMContentLoaded', () => {
     createWidget()
-    document.getElementById('kskChatBtn').addEventListener('click', () => kskChat.toggle())
+    document.getElementById('amourChatBtn').addEventListener('click', () => amourChat.toggle())
 
     // Показать при первом скролле
     const showChatOnScroll = () => {
       if (window.scrollY > 20) {
-        const widget = document.getElementById('ksk-chat')
+        const widget = document.getElementById('amour-chat')
         if (widget) {
           widget.classList.add('visible')
           window.removeEventListener('scroll', showChatOnScroll)
@@ -239,7 +239,7 @@
     // Показать индикатор через 3 секунды если чат не открыт
     setTimeout(() => {
       if (!isOpen) {
-        document.getElementById('kskUnread').style.display = 'flex'
+        document.getElementById('amourUnread').style.display = 'flex'
       }
     }, 3000)
 

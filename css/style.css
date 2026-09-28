@@ -1,7 +1,7 @@
 /* ============================================================
    AMOUR CARE FOUNDATION — style.css v3.5
    Calibrated spacing · Glass buttons · Scroll animations
-   (rebranded from KSK Farmos violet palette to Amour navy/teal/gold)
+   (Amour navy/teal/gold palette)
    ============================================================ */
 @import url('fonts.css');
 
@@ -298,12 +298,6 @@ p{color:var(--text-secondary);line-height:1.75;margin-bottom:1.25rem}
 .logo-text{font-family:var(--sans);font-weight:700;font-size:1.02rem;color:var(--text-primary);line-height:1.1}
 .logo-text span{display:block;font-size:0.60rem;font-weight:500;text-transform:uppercase;letter-spacing:0.12em;color:var(--text-muted);margin-top:2px}
 .nav{display:flex;align-items:center;gap:2px;margin-left:auto;margin-right:auto}
-/* True center relative to the header container, independent of logo/button width imbalance.
-   Only applied on wide viewports where there is guaranteed room, so nav never overlaps
-   the logo or Contact Us button at narrower desktop/tablet widths. */
-@media(min-width:1200px){
-  .nav{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);margin:0}
-}
 .nav-link{display:inline-flex;align-items:center;gap:4px;padding:9px clamp(8px,1.1vw,16px);font-size:clamp(0.78rem,1vw,0.9rem);font-weight:450;color:var(--text-primary);border-radius:var(--r-full);white-space:nowrap}
 .nav-link:hover{color:var(--violet);background:rgba(18, 38, 63,0.06)}
 .nav-link.active{color:var(--violet)}
@@ -380,8 +374,8 @@ p{color:var(--text-secondary);line-height:1.75;margin-bottom:1.25rem}
 }
 
 /* Hide chat widget when mobile menu is open */
-.mobile-menu.open ~ #ksk-chat,
-.header.menu-open ~ #ksk-chat {
+.mobile-menu.open ~ #amour-chat,
+.header.menu-open ~ #amour-chat {
   display: none !important;
 }
 
@@ -2427,4 +2421,29 @@ html[dir="rtl"] .hero-home-photo {
 }
 .map-embed iframe.loaded {
   opacity: 1;
+}
+
+/* ── Donate page: bank details card ── */
+.bank-card-head{display:flex;align-items:center;gap:var(--sp-2);margin-bottom:var(--sp-3)}
+.bank-card-head .card-icon{margin:0;flex-shrink:0}
+.bank-card-head h3{margin:0;font-size:1.2rem}
+.bank-list{margin:0}
+.bank-row{display:flex;justify-content:space-between;align-items:center;gap:var(--sp-2);padding:14px 0;border-bottom:1px solid var(--gray-100)}
+.bank-row:last-child{border-bottom:0}
+.bank-row dt{font-size:0.85rem;color:var(--text-muted);flex-shrink:0}
+.bank-row dd{margin:0;text-align:right;min-width:0}
+.bank-copy{background:none;border:0;padding:4px 8px;margin:-4px -8px;border-radius:var(--r-sm);font:inherit;font-weight:600;letter-spacing:0.03em;color:inherit;cursor:pointer;word-break:break-all;text-align:right;transition:background 0.2s ease,color 0.2s ease}
+.bank-copy:hover{background:var(--gray-50);color:var(--violet)}
+.bank-copy.is-copied{color:var(--violet)}
+.bank-copy.is-copied::after{content:" \2713";}
+.bank-hint{display:block;margin-top:4px;font-size:0.75rem;color:var(--text-muted);font-weight:400}
+.bank-note{margin-top:var(--sp-3);font-size:0.85rem;color:var(--text-muted);line-height:1.6}
+@media (max-width:480px){
+  .bank-row{flex-direction:column;align-items:flex-start;gap:4px}
+  .bank-row dd,.bank-copy{text-align:left}
+}
+/* Donate hero: subjects sit on the right of the photo, keep them in frame on narrow screens */
+.donate-hero-frame .hero-home-photo{object-position:65% center}
+@media (max-width:992px){
+  .donate-hero-frame .hero-home-photo{object-position:82% center !important}
 }
